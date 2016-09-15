@@ -13,5 +13,7 @@ app.get('/api/whoami', function(req, res){
     resObj.software =  req.headers['user-agent'].match(/(\()[\w+\s.;]+/)[0].replace('(', '');
     
     res.json(resObj);
-}).listen(process.env.port || 8080);
+}).listen(process.env.port || 8080, function(){
+    
+});
     
